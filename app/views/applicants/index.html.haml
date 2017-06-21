@@ -1,0 +1,41 @@
+%h1 Listing applicants
+
+%table
+  %thead
+    %tr
+      %th Firstname
+      %th Lastname
+      %th Telephone
+      %th Email
+      %th Address
+      %th Landlord
+      %th Landlordnum
+      %th Employer
+      %th Employername
+      %th Employernum
+      %th Income
+      %th
+      %th
+      %th
+
+  %tbody
+    - @applicants.each do |applicant|
+      %tr
+        %td= applicant.firstname
+        %td= applicant.lastname
+        %td= applicant.telephone
+        %td= applicant.email
+        %td= applicant.address
+        %td= applicant.landlord
+        %td= applicant.landlordnum
+        %td= applicant.employer
+        %td= applicant.employername
+        %td= applicant.employernum
+        %td= applicant.income
+        %td= link_to 'Show', applicant
+        %td= link_to 'Edit', edit_applicant_path(applicant)
+        %td= link_to 'Destroy', applicant, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Applicant', new_applicant_path

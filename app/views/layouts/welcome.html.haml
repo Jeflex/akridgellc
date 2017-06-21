@@ -1,0 +1,22 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
+    %title CDP
+    %meta{:charset => "utf-8"}
+    %meta{:content => "width=device-width, initial-scale=1, shrink-to-fit=no", :name => "viewport"}
+    %meta{:content => "ie=edge", "http-equiv" => "x-ua-compatible"}
+    = csrf_meta_tags
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    = render('layouts/header')
+    -# - if user_signed_in?
+    -#   - if current_user.is_institution?
+    -#     = render('layouts/institution_side_menu')
+    -#   - elsif current_user.is_cdap_admin? || current_user.is_admin?
+    -#     = render('layouts/administrator_side_menu')
+    -#   - else
+    -#     = render('layouts/side_menu')
+    = yield
+= render('layouts/footer')

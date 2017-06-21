@@ -1,0 +1,86 @@
+%header#header.header-rm
+  %nav.navbar.navbar-toggleable-md.navbar-light.aims-navbar
+    %button.navbar-toggler.navbar-toggler-right{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
+      %span.navbar-toggler-icon
+    .logo
+      = link_to root_url do
+        = image_tag('logos/akridge-logo.jpg')
+    #navbarSupportedContent.collapse.navbar-collapse
+      %ul.navbar-nav.mr-auto
+      .my-2.my-lg-0.navigation-buttons-wrapper
+        .nav-buttons
+          %ul.nav.navbar-nav
+            %li.nav-item
+              = link_to 'Home', root_url, :class => 'nav-link'
+            %li.nav-item
+              =link_to 'Properties', nil, :class => 'nav-link'
+            %li.nav-item
+              = link_to 'About', nil, :class => 'nav-link'
+            %li.nav-item
+              = link_to 'Apply', nil, :class => 'nav-link'
+            %li.nav-item
+              = link_to 'Contact', nil, :class => 'nav-link'
+            -# - if user_signed_in?
+            -#   %li.nav-item.active
+            -#     %a#side-menu.nav-link{:href => "#sidr", :style => "font-size:2.6rem;margin-top:-14px;"}
+            -#       %i.fa.fa-user-circle{"aria-hidden" => "true"}
+            -#       %i.fa.fa-times-circle{"aria-hidden" => "true", :style => "display:none"}
+            -#   %li.nav-item.login-btn
+            -#     = link_to('Logout', destroy_user_session_path, :method => :delete, :class => 'btn btn-login')
+            -# - else
+            -#   %li.nav-item.login-btn
+            -#     = link_to 'Login/Sign Up', new_user_session_path, :class => 'btn btn-login'
+
+-# %nav.navbar.navbar-default.navbar-inverse.topnav{:style => "background-color:#263137;"}
+-#   .container
+-#     .navbar-header
+-#       %button.navbar-toggle.collapsed{"aria-expanded" => "false", "data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+-#         %span.sr-only Toggle navigation
+-#         %span.icon-bar
+-#         %span.icon-bar
+-#         %span.icon-bar
+-#
+-#       -# = link_to image_tag('logo.png'), root_path, class: "imglink"
+-#       -# = link_to image_tag('logo.png'), root_path, class: "imglink"
+-#
+-#       #bs-example-navbar-collapse-1.collapse.navbar-collapse
+-#         %ul.nav.navbar-nav.navbar-right
+-#           %li
+-#             =link_to "Home", root_path
+-#
+-#           %li
+-#             =link_to "Properties", nil
+-#
+-#           %li
+-#             =link_to "Apply", new_applicant_path
+-#
+-#           %li
+-#             =link_to "About", about_path
+-#
+-#           %li
+-#             =link_to "Contact", contact_path
+-#
+-#           -# %li.dropdown
+-#           -#   %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+-#           -#     Search Categories
+-#           -#     %span.caret
+-#           -#   %ul.dropdown-menu
+-#           -#     %li
+-#           -#       =link_to "Option 1", #
+-#           -#
+-#           -#     %li
+-#           -#       =link_to "Option 2", #
+-#           -#
+-#           -#     %li
+-#           -#       =link_to "Option 3", #
+-#
+-#           -# %li
+-#           -#   - if logged_in?
+-#           -#     =link_to "Profile", profile_path
+-#
+-#           -# %li
+-#           -#   - if logged_in?
+-#           -#     =link_to "Log Out", sign_out_path
+-#           -#
+-#           -#   - if !logged_in?
+-#           -#     =link_to "Sign in", signin_path
