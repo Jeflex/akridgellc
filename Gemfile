@@ -5,19 +5,28 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 gem "font-awesome-rails"
+gem 'will_paginate', '~> 3.1.0'
+gem 'simple_form'
 #bootstrap
-gem 'bootstrap-will_paginate'
+gem 'will_paginate-bootstrap'
 gem 'bootstrap', '~> 4.0.0.alpha3.1'
 
 source 'http://insecure.rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'
 end
 
+gem 'sunspot_rails'
+gem 'sunspot_solr'
+
 gem 'autoprefixer-rails'
 
 gem 'jquery-rails'
 #haml
 gem "haml-rails", "~> 0.9"
+
+#datatables
+gem 'jquery-datatables-rails'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.1'

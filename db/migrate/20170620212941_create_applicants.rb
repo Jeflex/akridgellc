@@ -1,8 +1,8 @@
 class CreateApplicants < ActiveRecord::Migration[5.1]
   def change
     create_table :applicants do |t|
-      t.text :firstname
-      t.text :lastname
+      t.string :firstname
+      t.string :lastname
       t.integer :telephone
       t.string :email
       t.string :address
@@ -15,5 +15,7 @@ class CreateApplicants < ActiveRecord::Migration[5.1]
 
       t.timestamps
     end
+    change_column :applicants, :lastname, :string
+    change_column :applicants, :firstname, :string
   end
 end

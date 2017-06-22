@@ -1,0 +1,3 @@
+class ApplyMailerController < ApplicationController
+  
+end

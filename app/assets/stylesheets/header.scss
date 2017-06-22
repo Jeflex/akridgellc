@@ -28,6 +28,9 @@
           font-weight: bolder;
           font-family: 'Dosis', sans-serif;
         }
+        a:hover{
+          background-color: #ffffff
+        }
         &.active {
           a {
             color: $cdap-red;

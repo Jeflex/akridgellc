@@ -11,12 +11,5 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     = render('layouts/header')
-    -# - if user_signed_in?
-    -#   - if current_user.is_institution?
-    -#     = render('layouts/institution_side_menu')
-    -#   - elsif current_user.is_cdap_admin? || current_user.is_admin?
-    -#     = render('layouts/administrator_side_menu')
-    -#   - else
-    -#     = render('layouts/side_menu')
     = yield
 = render('layouts/footer')

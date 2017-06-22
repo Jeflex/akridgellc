@@ -16,4 +16,5 @@
 //= require jquery
 //= require tether
 //= require bootstrap
+//= require dataTables/jquery.dataTables
 //= require_tree .

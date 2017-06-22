@@ -4,7 +4,13 @@ class ApplicantsController < ApplicationController
   # GET /applicants
   # GET /applicants.json
   def index
-    @applicants = Applicant.all
+    @applicants = Applicant.paginate(:page => params[:page])
+    if params[:search].present?
+      @search = Applicant.search do
+        fulltext params[:search]
+      end
+      @applicants=@search.results
+    end
   end
 
   # GET /applicants/1
@@ -25,9 +31,9 @@ class ApplicantsController < ApplicationController
   # POST /applicants.json
   def create
     @applicant = Applicant.new(applicant_params)
-
     respond_to do |format|
       if @applicant.save
+        ApplyMailer.new_apply_email(applicant_params).deliver_now
         format.html { redirect_to @applicant, notice: 'Applicant was successfully created.' }
         format.json { render :show, status: :created, location: @applicant }
       else

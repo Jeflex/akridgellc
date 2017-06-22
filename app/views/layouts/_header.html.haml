@@ -15,11 +15,11 @@
             %li.nav-item
               =link_to 'Properties', nil, :class => 'nav-link'
             %li.nav-item
-              = link_to 'About', nil, :class => 'nav-link'
+              = link_to 'About', about_path, :class => 'nav-link'
             %li.nav-item
-              = link_to 'Apply', nil, :class => 'nav-link'
+              = link_to 'Apply', new_applicant_path, :class => 'nav-link'
             %li.nav-item
-              = link_to 'Contact', nil, :class => 'nav-link'
+              = link_to 'Contact', contact_path, :class => 'nav-link'
             -# - if user_signed_in?
             -#   %li.nav-item.active
             -#     %a#side-menu.nav-link{:href => "#sidr", :style => "font-size:2.6rem;margin-top:-14px;"}

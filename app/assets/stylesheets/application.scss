@@ -19,8 +19,14 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
 @import "font-awesome";
 @import "footer";
+@import "applicants";
 @import "header";
 @import "welcome";
+@import "scaffolds";
 @import 'bootstrap';
+@require "dataTables/jquery.dataTables";
+@require "jquery.ui.core";
+@require "jquery.ui.theme";
+@require "dataTables/src/demo_table_jui";
 @require "self";
 @require "tree .";
