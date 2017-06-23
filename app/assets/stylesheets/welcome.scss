@@ -3,3 +3,56 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "colors";
 // ==============================
+.background-image-wrapper {
+  background-color: #0D3B7E;
+  // background:linear-gradient(rgba(0, 39, 97, 0.9),rgba(0, 39, 97, 0.9)), url('/assets/1920x1280_home_bg.jpg');background-size:cover;background-repeat:no-repeat;background-position:50% 50%;
+  background-image: image-url('ed.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 800px;
+  padding-top: 96px;
+  padding-bottom: 150px;
+}
+.welcome-block {
+  padding-top: 50px;
+  margin-top:96px;
+  background-color: rgba(0,0,0,0.5);
+  h1 {
+    color: #ffffff;
+    font-size: 2.9rem;
+    text-transform: uppercase;
+    font-family: 'Oswald';
+    font-weight: normal;
+    text-align: center;
+    letter-spacing: 4px;
+    &.red {
+      color: $cdap_red;
+    }
+  }
+  h2 {
+    // color: #8D99B8;
+    color: #ffffff;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-family: 'Oswald';
+    font-weight: normal;
+    text-align: center;
+    letter-spacing: 4px;
+    &.red {
+      color: $cdap_red;
+    }
+  }
+  hr {
+    margin: 20px 40%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2px 0;
+    &.red {
+      background-color: $cdap_red;
+    }
+    &.grey {
+      background-color: #e3e3e3;
+    }
+  }
+}
