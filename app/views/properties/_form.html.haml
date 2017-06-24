@@ -1,0 +1,16 @@
+= simple_form_for(@property) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :address
+    = f.input :description
+
+  = f.fields_for :post_attachments do |p|
+    .field
+      = p.label :avatar
+      %br/
+      = p.file_field :avatar, :multiple => true, name: "property_attachments[avatar][]"
+
+
+  .form-actions
+    = f.button :submit

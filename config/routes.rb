@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :property_attachments
+  resources :properties
   get 'sessions/new'
 
   resources :users

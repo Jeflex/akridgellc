@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Property:
+  = @property_attachment.property_id
+%p
+  %b Avatar:
+  = @property_attachment.avatar
+
+= link_to 'Edit', edit_property_attachment_path(@property_attachment)
+\|
+= link_to 'Back', property_attachments_path
