@@ -23,8 +23,12 @@
 @import "header";
 @import "welcome";
 @import "scaffolds";
+@import "bootstrap-sprockets";
 @import 'bootstrap';
+@import "property_attachments";
+@import "properties";
 @require "dataTables/jquery.dataTables";
+@require "jquery.ui.all";
 @require "jquery.ui.core";
 @require "jquery.ui.theme";
 @require "dataTables/src/demo_table_jui";

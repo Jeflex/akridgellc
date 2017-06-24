@@ -1,0 +1,23 @@
+%h1 Listing property_attachments
+
+%table
+  %thead
+    %tr
+      %th Property
+      %th Avatar
+      %th
+      %th
+      %th
+
+  %tbody
+    - @property_attachments.each do |property_attachment|
+      %tr
+        %td= property_attachment.property_id
+        %td= property_attachment.avatar
+        %td= link_to 'Show', property_attachment
+        %td= link_to 'Edit', edit_property_attachment_path(property_attachment)
+        %td= link_to 'Destroy', property_attachment, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Property attachment', new_property_attachment_path

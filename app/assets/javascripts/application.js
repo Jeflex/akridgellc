@@ -12,9 +12,11 @@
 //
 
 //= require rails-ujs
-//= require turbolinks
 //= require jquery
+//= require jquery_ujs
+//= require turbolinks
 //= require tether
 //= require bootstrap
+//= require bootstrap-sprockets
 //= require dataTables/jquery.dataTables
 //= require_tree .
