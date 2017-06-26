@@ -1,3 +1,24 @@
 // Place all the styles related to the Sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.field {
+  table-layout: auto;
+  text-align: center;
+  width: 100%;
+}
+
+/* line 12, C:/Sites/akridgellc/app/assets/stylesheets/applicants.scss */
+input {
+  width: 30%;
+
+}
+
+/* line 15, C:/Sites/akridgellc/app/assets/stylesheets/applicants.scss */
+label {
+  color: #ffffff;
+}
+
+/* line 18, C:/Sites/akridgellc/app/assets/stylesheets/applicants.scss */
+.actions {
+  text-align: center;
+}

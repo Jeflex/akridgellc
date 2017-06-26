@@ -3,12 +3,33 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "bootstrap";
 @import "colors";
+img{
+  width: 100%;
+  margin: auto;
+}
+.item{
+  max-block-size: 300px;
+}
+//  div.c-wrapper{
+//     width: 80%; /* for example */
+//     margin: auto;
+// }
+//
+// .carousel-inner > .item > img,
+// .carousel-inner > .item > a > img{
+// width: 100%; /* use this, or not */
+// margin: auto;
+// }
 .img-custom{
   max-block-size:500px;
+}
+.welcome-block{
+  padding-bottom: 70px;
 }
 .properties-block {
   padding: 15px;
   margin-top:70px;
+  margin-bottom: 70px;
   background-color: rgba(0,0,0,0.5);
   h1 {
     color: #ffffff;

@@ -1,45 +1,48 @@
-.container
-  %h1 Listing applicants
-  %p
-    = form_tag applicants_path, :method => 'get' do
-      = text_field_tag 'search', nil, placeholder: 'Name, Email'
-      = submit_tag "Search"
-  %table.table-responsive.table-striped
-    %thead
-      %tr
-        %th Firstname
-        %th Lastname
-        %th Telephone
-        %th Email
-        %th Address
-        %th Landlord
-        %th Landlordnum
-        %th Employer
-        %th Employername
-        %th Employernum
-        %th Income
-        %th
-        %th
-        %th
+.background-image-wrapper
+  .welcome-block
+    .container
+      %h1 Listing applicants
+      %p
+        = form_tag applicants_path, :method => 'get' do
+          = text_field_tag 'search', nil, placeholder: 'Name, Email'
+          = submit_tag "Search"
+      .container{:style => "overflow:auto; background: #ffffff"}
+        %table.table-responsive.table-striped{:style => "background:#ffffff"}
+          %thead
+            %tr
+              %th{:style => "padding-right:10px;"} Firstname
+              %th{:style => "padding-right:10px;"} Lastname
+              %th{:style => "padding-right:10px;"} Telephone
+              %th{:style => "padding-right:10px;"} Email
+              %th{:style => "padding-right:10px;"} Address
+              %th{:style => "padding-right:10px;"} Landlord
+              %th{:style => "padding-right:10px;"} Landlordnum
+              %th{:style => "padding-right:10px;"} Employer
+              %th{:style => "padding-right:10px;"} Employername
+              %th{:style => "padding-right:10px;"} Employernum
+              %th{:style => "padding-right:10px;"} Income
+              %th{:style => "padding-right:10px;"}
+              %th{:style => "padding-right:10px;"}
+              %th{:style => "padding-right:10px;"}
 
-    %tbody
-      - @applicants.each do |applicant|
-        %tr
-          %td= applicant.firstname
-          %td= applicant.lastname
-          %td= applicant.telephone
-          %td= applicant.email
-          %td= applicant.address
-          %td= applicant.landlord
-          %td= applicant.landlordnum
-          %td= applicant.employer
-          %td= applicant.employername
-          %td= applicant.employernum
-          %td= applicant.income
-          %td= link_to 'Show', applicant
-          %td= link_to 'Edit', edit_applicant_path(applicant)
-          %td= link_to 'Destroy', applicant, :method => :delete, :data => { :confirm => 'Are you sure?' }
+          %tbody
+            - @applicants.each do |applicant|
+              %tr
+                %td= applicant.firstname
+                %td= applicant.lastname
+                %td= applicant.telephone
+                %td= applicant.email
+                %td= applicant.address
+                %td= applicant.landlord
+                %td= applicant.landlordnum
+                %td= applicant.employer
+                %td= applicant.employername
+                %td= applicant.employernum
+                %td= applicant.income
+                %td= link_to 'Show', applicant, :class => "btn btn-primary", :style => "color:#ffffff"
+                %td= link_to 'Edit', edit_applicant_path(applicant), :class => "btn btn-warning", :style => "color:#ffffff"
+                %td= link_to 'Destroy', applicant, :method => :delete, :data => { :confirm => 'Are you sure?' }, :class => "btn btn-danger", :style => "color:#ffffff"
 
-  %br
-  = will_paginate @applicants, renderer: BootstrapPagination::Rails
-  = link_to 'New Applicant', new_applicant_path
+      %br
+      -# = will_paginate @applicants, renderer: BootstrapPagination::Rails
+      = link_to 'New Applicant', new_applicant_path, :class => "btn btn-primary", :style => "color:#ffffff"

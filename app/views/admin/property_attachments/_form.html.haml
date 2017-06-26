@@ -1,0 +1,10 @@
+= image_tag @post_attachment.avatar
+= simple_form_for(@property_attachment) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :property_id
+    = f.input :avatar
+
+  .form-actions
+    = f.button :submit

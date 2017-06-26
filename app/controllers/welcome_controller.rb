@@ -1,4 +1,5 @@
 class WelcomeController < ApplicationController
+  include SessionsHelper
   def index
 
   end
@@ -9,5 +10,9 @@ class WelcomeController < ApplicationController
 
   def contact
 
+  end
+
+  def admin
+    is_admin?
   end
 end

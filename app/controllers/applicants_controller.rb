@@ -4,6 +4,7 @@ class ApplicantsController < ApplicationController
   # GET /applicants
   # GET /applicants.json
   def index
+    is_admin?
     @applicants = Applicant.paginate(:page => params[:page])
     if params[:search].present?
       @search = Applicant.search do
@@ -16,6 +17,7 @@ class ApplicantsController < ApplicationController
   # GET /applicants/1
   # GET /applicants/1.json
   def show
+    is_admin?
   end
 
   # GET /applicants/new
@@ -25,6 +27,7 @@ class ApplicantsController < ApplicationController
 
   # GET /applicants/1/edit
   def edit
+    is_admin?
   end
 
   # POST /applicants
@@ -46,6 +49,7 @@ class ApplicantsController < ApplicationController
   # PATCH/PUT /applicants/1
   # PATCH/PUT /applicants/1.json
   def update
+    is_admin?
     respond_to do |format|
       if @applicant.update(applicant_params)
         format.html { redirect_to @applicant, notice: 'Applicant was successfully updated.' }
@@ -60,6 +64,7 @@ class ApplicantsController < ApplicationController
   # DELETE /applicants/1
   # DELETE /applicants/1.json
   def destroy
+    is_admin?
     @applicant.destroy
     respond_to do |format|
       format.html { redirect_to applicants_url, notice: 'Applicant was successfully destroyed.' }

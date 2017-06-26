@@ -1,0 +1,12 @@
+.background-image-wrapper
+  .container.welcome-block.text-center
+    %h2 Welcome,
+    %h2
+      =current_user.username
+    .container.text-center.text-left
+      =link_to 'Applicants', applicants_path, :class => "btn btn-primary", :style => "color:#ffffff"
+      %br
+      =link_to 'Users', users_path, :class => "btn btn-primary", :style => "color:#ffffff"
+      %br
+      =link_to 'Properties', proplist_path, :class => "btn btn-primary", :style => "color:#ffffff"
+      %br

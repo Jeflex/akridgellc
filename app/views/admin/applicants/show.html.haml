@@ -1,0 +1,39 @@
+%p#notice= notice
+
+%p
+  %b Firstname:
+  = @applicant.firstname
+%p
+  %b Lastname:
+  = @applicant.lastname
+%p
+  %b Telephone:
+  = @applicant.telephone
+%p
+  %b Email:
+  = @applicant.email
+%p
+  %b Address:
+  = @applicant.address
+%p
+  %b Landlord:
+  = @applicant.landlord
+%p
+  %b Landlordnum:
+  = @applicant.landlordnum
+%p
+  %b Employer:
+  = @applicant.employer
+%p
+  %b Employername:
+  = @applicant.employername
+%p
+  %b Employernum:
+  = @applicant.employernum
+%p
+  %b Income:
+  = @applicant.income
+
+= link_to 'Edit', edit_applicant_path(@applicant)
+\|
+= link_to 'Back', applicants_path

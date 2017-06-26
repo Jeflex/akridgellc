@@ -8,36 +8,47 @@
 
   .field
     = f.label :firstname
+    %br
     = f.text_field :firstname
   .field
     = f.label :lastname
+    %br
     = f.text_field :lastname
   .field
     = f.label :telephone
+    %br
     = f.text_field :telephone
   .field
     = f.label :email
+    %br
     = f.text_field :email
   .field
     = f.label :address
+    %br
     = f.text_field :address
   .field
     = f.label :landlord
+    %br
     = f.text_field :landlord
   .field
     = f.label :landlordnum
+    %br
     = f.text_field :landlordnum
   .field
     = f.label :employer
+    %br
     = f.text_field :employer
   .field
     = f.label :employername
+    %br
     = f.text_field :employername
   .field
     = f.label :employernum
+    %br
     = f.text_field :employernum
   .field
     = f.label :income
+    %br
     = f.text_field :income
   .actions
-    = f.submit 'Save'
+    = f.submit 'Submit', :class => "btn btn-primary"
