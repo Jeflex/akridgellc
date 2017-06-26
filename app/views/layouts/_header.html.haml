@@ -1,37 +1,68 @@
 %header#header.header-rm
-  %nav.navbar.navbar-toggleable-md.navbar-light.aims-navbar
-    %button.navbar-toggler.navbar-toggler-right{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
-      %span.navbar-toggler-icon
-    .logo
-      = link_to root_url do
-        = image_tag('logos/akridge-logo.jpg')
-    #navbarSupportedContent.collapse.navbar-collapse
-      %ul.navbar-nav.mr-auto
-      .my-2.my-lg-0.navigation-buttons-wrapper
-        .nav-buttons
-          %ul.nav.navbar-nav
-            %li.nav-item
-              = link_to 'Home', root_url, :class => 'nav-link'
-            %li.nav-item
-              =link_to 'Properties', properties_path, :class => 'nav-link'
-            %li.nav-item
-              = link_to 'About', about_path, :class => 'nav-link'
-            %li.nav-item
-              = link_to 'Apply', new_applicant_path, :class => 'nav-link'
-            %li.nav-item
-              = link_to 'Contact', contact_path, :class => 'nav-link'
-            - if logged_in?
-              %li.nav-item
-                = link_to 'Admin', option_path, :class => 'nav-link'
-              -# %li.nav-item.active
-              -#   %a#side-menu.nav-link{:href => "#sidr", :style => "font-size:2.6rem;margin-top:-14px;"}
-              -#     %i.fa.fa-user-circle{"aria-hidden" => "true"}
-              -#     %i.fa.fa-times-circle{"aria-hidden" => "true", :style => "display:none"}
-              %li.nav-item.login-btn
-                = link_to('Logout', logout_path, :method => :delete, :class => 'btn btn-login')
-            - else
-              %li.nav-item.login-btn
-                = link_to 'Login', login_path, :class => 'btn btn-login'
+  .container-fluid
+    %nav.navbar.custom-head
+      .container-fluid
+        .navbar-header
+          %button.navbar-toggle{"data-target" => "#myNavbar", "data-toggle" => "collapse", :type => "button", :style => "padding-top: 20px;"}
+            %span.icon-bar{:style => "background-color:black"}
+            %span.icon-bar{:style => "background-color:black"}
+            %span.icon-bar{:style => "background-color:black"}
+          %a.navbar-brand
+            = link_to root_url do
+              = image_tag 'logos/akridge-logo.jpg', :style => "max-width:100px; padding-top:20px", :class => "logo"
+        #myNavbar.collapse.navbar-collapse
+          %ul.nav.navbar-nav.navbar-right{:style => "padding-top: 20px;"}
+            %li
+              = link_to 'Home', root_url, :style => "text-align:right"
+            %li
+              = link_to 'Properties', properties_path, :style => "text-align:right"
+            %li
+              = link_to 'About', about_path, :style => "text-align:right"
+            %li
+              = link_to 'Apply', new_applicant_path, :style => "text-align:right"
+            -if logged_in?
+              %li
+                = link_to 'Admin', option_path, :style => "text-align:right"
+              %li
+                = link_to 'Logout', logout_path, :method => :delete, :style => "text-align:right"
+            -else
+              %li
+                = link_to 'Login', login_path, :class => 'btn btn-login', :style => "text-align:right"
+
+-# %header#header.header-rm
+-#   %nav.navbar.navbar-toggleable-md.navbar-light.aims-navbar
+-#     %button.navbar-toggler.navbar-toggler-right{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
+-#       %span.navbar-toggler-icon
+-#     .logo
+-#       = link_to root_url do
+-#         = image_tag('logos/akridge-logo.jpg')
+-#     #navbarSupportedContent.collapse.navbar-collapse
+-#       %ul.navbar-nav.mr-auto
+-#       .my-2.my-lg-0.navigation-buttons-wrapper
+-#         .nav-buttons
+-#           %ul.nav.navbar-nav
+-#             %li.nav-item
+-#               = link_to 'Home', root_url, :class => 'nav-link'
+-#             %li.nav-item
+-#               =link_to 'Properties', properties_path, :class => 'nav-link'
+-#             %li.nav-item
+-#               = link_to 'About', about_path, :class => 'nav-link'
+-#             %li.nav-item
+-#               = link_to 'Apply', new_applicant_path, :class => 'nav-link'
+-#             %li.nav-item
+-#               = link_to 'Contact', contact_path, :class => 'nav-link'
+-#             - if logged_in?
+-#               %li.nav-item
+-#                 = link_to 'Admin', option_path, :class => 'nav-link'
+-#               -# %li.nav-item.active
+-#               -#   %a#side-menu.nav-link{:href => "#sidr", :style => "font-size:2.6rem;margin-top:-14px;"}
+-#               -#     %i.fa.fa-user-circle{"aria-hidden" => "true"}
+-#               -#     %i.fa.fa-times-circle{"aria-hidden" => "true", :style => "display:none"}
+-#               %li.nav-item.login-btn
+-#                 = link_to('Logout', logout_path, :method => :delete, :class => 'btn btn-login')
+-#             - else
+-#               %li.nav-item.login-btn
+-#                 = link_to 'Login', login_path, :class => 'btn btn-login'
 
   -# %nav.navbar.navbar-default.topnav.aims-navbar
   -#   .container

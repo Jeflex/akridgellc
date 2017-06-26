@@ -10,7 +10,6 @@ Rails.application.routes.draw do
 
   get '/about', to:"welcome#about"
   get '/properties', to:"welcome#properties"
-  get '/contact', to:"welcome#contact"
   get '/login',   to: 'sessions#new'
   post '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'

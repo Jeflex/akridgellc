@@ -35,7 +35,7 @@ class PropertiesController < ApplicationController
   def create
     is_admin?
     @property = Property.new(property_params)
-
+    @property.active=true
     respond_to do |format|
       if @property.save
         params[:property_attachments]['avatar'].each do |a|
@@ -85,6 +85,6 @@ class PropertiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def property_params
-      params.require(:property).permit(:id, :address, :description, property_attachments_attributes: [:id, :post_id, :avatar])
+      params.require(:property).permit(:id, :active, :address, :description, property_attachments_attributes: [:id, :post_id, :avatar])
     end
 end

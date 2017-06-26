@@ -2,16 +2,17 @@
   .welcome-block
     .container
       %h1 Listing properties
-      %p
-        = form_tag properties_path, :method => 'get' do
-          = text_field_tag 'search', nil, placeholder: 'Address'
-          = submit_tag "Search"
-      .container{:style => "overflow:auto;"}
+      -# %p
+      -#   = form_tag properties_path, :method => 'get' do
+      -#     = text_field_tag 'search', nil, placeholder: 'Address'
+      -#     = submit_tag "Search"
+      .container{:style => "overflow:auto; background:#ffffff"}
         %table.table-responsive.table-striped
           %thead
             %tr
-              %th{:style => "padding-right:10px; color:#ffffff"} Address
-              %th{:style => "padding-right:10px; color:#ffffff"} Description
+              %th{:style => "padding-right:10px;"} Address
+              %th{:style => "padding-right:10px;"} Description
+              %th{:style => "padding-right:10px;"} Active
               %th{:style => "padding-right:10px;"}
               %th{:style => "padding-right:10px;"}
               %th{:style => "padding-right:10px;"}
@@ -19,8 +20,9 @@
           %tbody
             - @properties.each do |prop|
               %tr
-                %td{:style => "color:#ffffff"}= prop.address
-                %td{:style => "color:#ffffff"}= prop.description
+                %td= prop.address
+                %td= prop.description
+                %td= prop.active
                 %td= link_to 'Show', prop, :class => "btn btn-primary", :style => "color:#ffffff"
                 %td= link_to 'Edit', edit_property_path(prop), :class => "btn btn-warning", :style => "color:#ffffff"
                 %td= link_to 'Destroy', prop, :method => :delete, :data => { :confirm => 'Are you sure?' }, :class => "btn btn-danger", :style => "color:#ffffff"

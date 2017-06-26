@@ -4,9 +4,11 @@
   .form-inputs
     = f.input :address
     = f.input :description
+    = f.label "Active"
+    = f.check_box :active
 
   = f.fields_for :post_attachments do |p|
-    .field
+    .field.text-left
       = p.label :avatar
       %br/
       = p.file_field :avatar, :multiple => true, name: "property_attachments[avatar][]"

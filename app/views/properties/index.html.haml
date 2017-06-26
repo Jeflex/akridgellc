@@ -2,29 +2,30 @@
   .welcome-block
     %h1 Listing properties
     - @properties.each.with_index do |property, index|
-      .container.properties-block
-        %h2
-          =property.address
-        .row
-          .col-xs-6.col-sm-6.col-md-6.col-lg-6
-            .carousel.slide{:id=>"slide-images"+index.to_s, :data => {:ride => "carousel"}}
-              .carousel-inner
-                -property.property_attachments.each do |pic|
-                  -if pic == property.property_attachments.first
-                    .item.active
-                      = image_tag asset_path(pic.avatar_url.to_s), :class => "img-responsive img-custom"
-                      -# image_tag asset_path(property.property_attachments[0].avatar_url.to_s), :class => "img-responsive img-custom"
-                  -else
-                    .item
-                      = image_tag(pic.avatar_url)
-              %a.left.carousel-control{:href => "#slide-images"+index.to_s, :data => {:slide => "prev"}}
-                %span.glyphicon.glyphicon-chevron-left
-              %a.right.carousel-control{:href => "#slide-images"+index.to_s, :data => {:slide => "next"}}
-                %span.glyphicon.glyphicon-chevron-right
-            -# = image_tag asset_path(property.property_attachments[0].avatar_url.to_s), :class => "img-responsive img-custom"
-          .col-xs-6.col-sm-6.col-md-6.col-lg-6
-            %p{:style => "color:#ffffff"}
-              =property.description
+      -if (property.active == nil) || (property.active == true)
+        .container.properties-block
+          %h2
+            =property.address
+          .row
+            .col-xs-6.col-sm-6.col-md-6.col-lg-6
+              .carousel.slide{:id=>"slide-images"+index.to_s, :data => {:ride => "carousel"}}
+                .carousel-inner
+                  -property.property_attachments.each do |pic|
+                    -if pic == property.property_attachments.first
+                      .item.active
+                        = image_tag asset_path(pic.avatar_url.to_s), :class => "img-responsive img-custom"
+                        -# image_tag asset_path(property.property_attachments[0].avatar_url.to_s), :class => "img-responsive img-custom"
+                    -else
+                      .item
+                        = image_tag(pic.avatar_url)
+                %a.left.carousel-control{:href => "#slide-images"+index.to_s, :data => {:slide => "prev"}}
+                  %span.glyphicon.glyphicon-chevron-left
+                %a.right.carousel-control{:href => "#slide-images"+index.to_s, :data => {:slide => "next"}}
+                  %span.glyphicon.glyphicon-chevron-right
+              -# = image_tag asset_path(property.property_attachments[0].avatar_url.to_s), :class => "img-responsive img-custom"
+            .col-xs-6.col-sm-6.col-md-6.col-lg-6
+              %p{:style => "color:#ffffff"}
+                =property.description
 
 
     -# - @properties.each do |property|
