@@ -3,15 +3,15 @@
     %nav.navbar.custom-head
       .container-fluid
         .navbar-header
-          %button.navbar-toggle{"data-target" => "#myNavbar", "data-toggle" => "collapse", :type => "button", :style => "padding-top: 20px;"}
+          %button.navbar-toggle{"data-target" => "#myNavbar", "data-toggle" => "collapse", :type => "button", :style => "margin-top:45px; border-width:1px; border-color:black"}
             %span.icon-bar{:style => "background-color:black"}
             %span.icon-bar{:style => "background-color:black"}
             %span.icon-bar{:style => "background-color:black"}
           %a.navbar-brand
             = link_to root_url do
-              = image_tag 'logos/akridge-logo.jpg', :style => "max-width:100px; padding-top:20px", :class => "logo"
+              = image_tag 'logos/Logom.png', :style => " padding-top:20px", :class => "img custom-logo"
         #myNavbar.collapse.navbar-collapse
-          %ul.nav.navbar-nav.navbar-right{:style => "padding-top: 20px;"}
+          %ul.nav.navbar-nav.navbar-right{:style => "margin-top:45px;"}
             %li
               = link_to 'Home', root_url, :style => "text-align:right"
             %li
