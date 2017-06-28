@@ -12,12 +12,12 @@
   - @property_attachments.each do |p|
     .row
       .col-xs-6.col-sm-6.col-md-6.col-lg-6
-        = link_to "Edit Attachment", edit_property_attachment_path(p), :class => "btn btn-warning"
-        = link_to "Delete Attachment", destroy_att_path(:id => p.id), :class => "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' }
+        = link_to "Edit Attachment", edit_property_attachment_path(:id => p.id), :class => "btn btn-warning", :style => "color:white"
+        = link_to "Delete Attachment", destroy_att_path(:id => p.id), :class => "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' }, :style => "color:white"
       .col-xs-6.col-sm-6.col-md-6.col-lg-6
         = image_tag p.avatar_url, :class => "img-responsive"
     %br
   %br
-  = link_to 'Edit', edit_property_path(@property), :class => "btn btn-primary"
-  = link_to 'Destroy', destroy_prop_path(:id => @property.id), :class => "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' }
-  = link_to 'Back', properties_path, :class => "btn btn-primary"
+  = link_to 'Edit', edit_property_path(@property), :class => "btn btn-primary", :style => "color:white"
+  = link_to 'Back', properties_path, :class => "btn btn-primary", :style => "color:white"
+  = link_to 'Destroy', destroy_prop_path(:id => @property.id), :class => "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' }, :style => "color:white"

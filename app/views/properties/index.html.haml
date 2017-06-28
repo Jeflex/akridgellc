@@ -1,8 +1,10 @@
 .background-image-wrapper
   .welcome-block
     %h1 Listing properties
+    -zoz=0
     - @properties.each.with_index do |property, index|
       -if (property.active == nil) || (property.active == true)
+        -zoz=1
         .container.properties-block
           %h2
             =property.address
@@ -26,7 +28,11 @@
             .col-xs-6.col-sm-6.col-md-6.col-lg-6
               %p{:style => "color:#ffffff"}
                 =property.description
-
+    -if zoz==0
+      .container{:style => "text-align:center"}
+        %h2 Unfortunately, all of our properties are filled.
+        = link_to 'Apply Now!', new_applicant_path, :class => "btn btn-primary", :style => "color:#ffffff; align:center"
+        %h2 Apply now so that we may work with you in the future
 
     -# - @properties.each do |property|
     -#   .carousel.slide{:id=>"slide-images", :data => {:ride => "carousel"}}

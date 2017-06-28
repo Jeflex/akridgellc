@@ -1,10 +1,9 @@
-= image_tag @post_attachment.avatar
+= image_tag @property_attachment.avatar, :class => "img-responsive", :style => "max-width:300px; height:auto"
 = simple_form_for(@property_attachment) do |f|
   = f.error_notification
 
   .form-inputs
     = f.input :property_id
-    = f.input :avatar
 
   .form-actions
     = f.button :submit

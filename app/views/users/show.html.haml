@@ -1,15 +1,18 @@
-%p#notice= notice
+.background-image-wrapper
+  .welcome-block
+    .container{:style => "text-align:center"}
+      %p#notice= notice
 
-%p
-  %b Username:
-  = @user.username
-%p
-  %b Password:
-  = @user.password
-%p
-  %b Email:
-  = @user.email
+      %p{:style => "color:white"}
+        %b Username:
+        = @user.username
+      %p{:style => "color:white"}
+        %b Password:
+        = @user.password
+      %p{:style => "color:white"}
+        %b Email:
+        = @user.email
 
-= link_to 'Edit', edit_user_path(@user)
-\|
-= link_to 'Back', users_path
+      = link_to 'Edit', edit_user_path(@user), :class => "btn btn-primary", :style => "color:#ffffff"
+      \|
+      = link_to 'Back', users_path, :class => "btn btn-primary", :style => "color:#ffffff"

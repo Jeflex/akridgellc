@@ -9,15 +9,15 @@
   .field
     = f.label :firstname
     %br
-    = f.text_field :firstname
+    = f.text_field :firstname, required: true
   .field
     = f.label :lastname
     %br
-    = f.text_field :lastname
+    = f.text_field :lastname, required: true
   .field
     = f.label :telephone
     %br
-    = f.text_field :telephone
+    = f.text_field :telephone, required: true
   .field
     = f.label :email
     %br
@@ -39,15 +39,16 @@
     %br
     = f.text_field :employer
   .field
-    = f.label :employername
+    -# = f.input :employername, :class => "form-control", :label => "Employer Name"
+    = f.label :employername, "Employer Name"
     %br
     = f.text_field :employername
   .field
-    = f.label :employernum
+    = f.label :employernum, "Employer Number"
     %br
     = f.text_field :employernum
   .field
-    = f.label :income
+    = f.label :income, "Gross Monthly Income"
     %br
     = f.text_field :income
   .actions

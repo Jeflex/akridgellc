@@ -1,7 +1,10 @@
-%h1 Editing property_attachment
+.background-image-wrapper
+  .welcome-block
+    .container
+      %h1 Editing Property Attachment
 
-= render 'form'
+      = render 'form'
 
-= link_to 'Show', @property_attachment
-\|
-= link_to 'Back', property_attachments_path
+      = link_to 'Show', @property_attachment, :class => "btn btn-primary", :style => "color:#ffffff", :class => "btn btn-primary", :style => "color:#ffffff"
+      \|
+      = link_to 'Back', property_path(@property_attachment.property_id), :class => "btn btn-primary", :style => "color:#ffffff"

@@ -1,39 +1,42 @@
-%p#notice= notice
+.background-image-wrapper
+  .welcome-block
+    .container
+      %p#notice= notice
 
-%p
-  %b Firstname:
-  = @applicant.firstname
-%p
-  %b Lastname:
-  = @applicant.lastname
-%p
-  %b Telephone:
-  = @applicant.telephone
-%p
-  %b Email:
-  = @applicant.email
-%p
-  %b Address:
-  = @applicant.address
-%p
-  %b Landlord:
-  = @applicant.landlord
-%p
-  %b Landlordnum:
-  = @applicant.landlordnum
-%p
-  %b Employer:
-  = @applicant.employer
-%p
-  %b Employername:
-  = @applicant.employername
-%p
-  %b Employernum:
-  = @applicant.employernum
-%p
-  %b Income:
-  = @applicant.income
+      %p{:style => "color:white"}
+        %b Firstname:
+        = @applicant.firstname
+      %p{:style => "color:white"}
+        %b Lastname:
+        = @applicant.lastname
+      %p{:style => "color:white"}
+        %b Telephone:
+        = @applicant.telephone
+      %p{:style => "color:white"}
+        %b Email:
+        = @applicant.email
+      %p{:style => "color:white"}
+        %b Address:
+        = @applicant.address
+      %p{:style => "color:white"}
+        %b Landlord:
+        = @applicant.landlord
+      %p{:style => "color:white"}
+        %b Landlordnum:
+        = @applicant.landlordnum
+      %p{:style => "color:white"}
+        %b Employer:
+        = @applicant.employer
+      %p{:style => "color:white"}
+        %b Employername:
+        = @applicant.employername
+      %p{:style => "color:white"}
+        %b Employernum:
+        = @applicant.employernum
+      %p{:style => "color:white"}
+        %b Income:
+        = @applicant.income
 
-= link_to 'Edit', edit_applicant_path(@applicant)
-\|
-= link_to 'Back', applicants_path
+      = link_to 'Edit', edit_applicant_path(@applicant), :class => "btn btn-primary", :style => "color:#ffffff"
+      \|
+      = link_to 'Back', applicants_path, :class => "btn btn-primary", :style => "color:#ffffff"

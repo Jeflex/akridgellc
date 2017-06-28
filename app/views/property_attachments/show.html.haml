@@ -1,12 +1,15 @@
-%p#notice= notice
+.background-image-wrapper
+  .welcome-block
+    .container
+      %p#notice= notice
 
-%p
-  %b Property:
-  = @property_attachment.property_id
-%p
-  %b Avatar:
-  = @property_attachment.avatar
+      %p
+        %b Property:
+        = @property_attachment.property_id
+      %p
+        %b Avatar:
+        = image_tag @property_attachment.avatar, :class => "img-responsive", :style => "max-width:300px; height:auto"
 
-= link_to 'Edit', edit_property_attachment_path(@property_attachment)
-\|
-= link_to 'Back', property_attachments_path
+      = link_to 'Edit', edit_property_attachment_path(@property_attachment), :class => "btn btn-primary", :style => "color:#ffffff"
+      \|
+      = link_to 'Back', property_path(@property_attachment.property_id), :class => "btn btn-primary", :style => "color:#ffffff"
