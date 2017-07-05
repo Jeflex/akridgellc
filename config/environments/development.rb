@@ -39,8 +39,8 @@ config.action_mailer.default_url_options = { :host => 'localhost:3000' }
     address: 'smtp.gmail.com',
     port: 25,
     domain: 'smtp.gmail.com',
-    user_name: 'philliphassoun@gmail.com',
-    password: 'Zozzle5049!',
+    user_name: '*Some email*',
+    password: '*Some Password*',
     authentication: 'plain',
     enable_starttls_auto: true
   }
