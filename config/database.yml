@@ -9,10 +9,10 @@ default: &default
   encoding: unicode
   pool: 5
   timeout: 5000
-  username: postgres
+  username: *Not Shown*
   host: localhost
   port: 5432
-  password: Ttnkf@g2011!
+  password: *Not Shown*
 
 development:
   <<: *default
