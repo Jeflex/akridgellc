@@ -15,7 +15,7 @@ class ApplyMailer < ActionMailer::Base
     @income = feedback_params[:income]
     # Initialize the message here
     # mail(to: ["gavargas22@gmail.com","amiramontes3@utep.edu", "jrsanchez10@utep.edu", "melewis@utep.edu", "ammauro@utep.edu", "aims@utep.edu"], subject: 'There is a new institution registration pending')
-    mail(to: ["pchassoun@miners.utep.edu", "john.akridge92@gmail.com"], subject: 'Akridge LLC: A new applicant has applied')
+    mail(to: ["*Some Email*", "*Some Email*"], subject: 'Akridge LLC: A new applicant has applied')
   end
 
 end
